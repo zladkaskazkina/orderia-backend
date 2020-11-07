@@ -1,6 +1,6 @@
 const development = {
-  database: 'databasename',
-  username: 'username',
+  database: 'postrge',
+  username: 'postrge',
   password: 'password',
   host: 'localhost',
   dialect: 'sqlite' || 'mysql' || 'postgres',
