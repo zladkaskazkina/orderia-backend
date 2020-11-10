@@ -1,9 +1,9 @@
 const development = {
-  database: 'postrge',
-  username: 'postrge',
-  password: 'password',
+  database: 'postgres',
+  username: 'postgres',
+  password: 'example',
   host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  dialect: 'postgres',
 };
 
 const testing = {

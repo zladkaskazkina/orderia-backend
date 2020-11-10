@@ -39,15 +39,19 @@ const dbService = (environment, migrate) => {
     }
   };
 
+  // eslint-disable-next-line consistent-return
   const startDev = async () => {
     try {
       await authenticateDB();
 
+      successfulDBStart();
+      /*
       if (migrate) {
         return startMigrateTrue();
       }
 
       return startMigrateFalse();
+      */
     } catch (err) {
       return errorDBStart(err);
     }

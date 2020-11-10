@@ -37,7 +37,6 @@ switch (process.env.NODE_ENV) {
     );
     break;
   default:
-    /*
     database = new Sequelize(
       connection.development.database,
       connection.development.username,
@@ -51,10 +50,7 @@ switch (process.env.NODE_ENV) {
         },
         storage: path.join(process.cwd(), 'db', 'database.sqlite'),
       },
-    );*/
-
-    database = pgp('postgres://username:password@host:port/database')
-
+    );
 }
 
 module.exports = database;
