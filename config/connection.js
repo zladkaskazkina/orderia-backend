@@ -1,17 +1,9 @@
 const development = {
-  database: 'postgres',
+  database: 'Orderia',
   username: 'postgres',
   password: 'example',
   host: 'localhost',
   dialect: 'postgres',
-};
-
-const testing = {
-  database: 'databasename',
-  username: 'username',
-  password: 'password',
-  host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
 };
 
 const production = {
@@ -19,11 +11,10 @@ const production = {
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   host: process.env.DB_HOST || 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  dialect: 'postgres',
 };
 
 module.exports = {
   development,
-  testing,
   production,
 };

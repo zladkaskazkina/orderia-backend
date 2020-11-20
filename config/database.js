@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const path = require('path');
 
 const connection = require('./connection');
 
@@ -21,21 +20,6 @@ switch (process.env.NODE_ENV) {
       },
     );
     break;
-  case 'testing':
-    database = new Sequelize(
-      connection.testing.database,
-      connection.testing.username,
-      connection.testing.password, {
-        host: connection.testing.host,
-        dialect: connection.testing.dialect,
-        pool: {
-          max: 5,
-          min: 0,
-          idle: 10000,
-        },
-      },
-    );
-    break;
   default:
     database = new Sequelize(
       connection.development.database,
@@ -48,7 +32,6 @@ switch (process.env.NODE_ENV) {
           min: 0,
           idle: 10000,
         },
-        storage: path.join(process.cwd(), 'db', 'database.sqlite'),
       },
     );
 }
