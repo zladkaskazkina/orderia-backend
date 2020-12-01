@@ -1,0 +1,1 @@
+docker run -p 2017:2017 -e "DB_HOST=host.docker.internal" -e "DB_NAME=Orderia" -e "DB_USER=postgres" -e "DB_PASS=example" orderia-backend:latest

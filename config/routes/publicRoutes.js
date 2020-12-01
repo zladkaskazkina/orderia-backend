@@ -1,9 +1,17 @@
 const publicRoutes = {
-  'POST /user': 'UserController.register',
-  'POST /register': 'UserController.register', // alias for POST /user
+  //USER
+  'POST /users': 'UserController.register',
   'POST /login': 'UserController.login',
   'POST /validate': 'UserController.validate',
-  'GET /muj-text': 'TestController.index',
+  'GET /users': 'UserController.getAll',
+  //Products
+  'GET /products': 'ProductController.getAll',
+  'GET /products/:id': 'ProductController.getProductById',
+  'POST /products': 'ProductController.addProduct',
+  //Orders
+  'GET /orders': 'OrderController.getAll',
+  'GET /orders/:id': 'OrderController.getOrderById',
+  'POST /orders': 'OrderController.addOrder'
 };
 
 module.exports = publicRoutes;

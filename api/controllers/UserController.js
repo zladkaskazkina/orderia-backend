@@ -3,6 +3,7 @@ const authService = require('../services/auth.service');
 const bcryptService = require('../services/bcrypt.service');
 
 const UserController = () => {
+  // registrace
   const register = async (req, res) => {
     const { body } = req;
 
@@ -23,7 +24,7 @@ const UserController = () => {
 
     return res.status(400).json({ msg: 'Bad Request: Passwords don\'t match' });
   };
-
+// login
   const login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -55,7 +56,7 @@ const UserController = () => {
 
     return res.status(400).json({ msg: 'Bad Request: Email or password is wrong' });
   };
-
+// validace
   const validate = (req, res) => {
     const { token } = req.body;
 
@@ -67,7 +68,7 @@ const UserController = () => {
       return res.status(200).json({ isvalid: true });
     });
   };
-
+// zobrazit vse usery
   const getAll = async (req, res) => {
     try {
       const users = await User.findAll();
@@ -78,6 +79,7 @@ const UserController = () => {
       return res.status(500).json({ msg: 'Internal server error' });
     }
   };
+// zobrazit jednoho usera dle ID
 
 
   return {

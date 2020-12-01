@@ -18,8 +18,7 @@
     "helmet": "^3.12.0",
     "jsonwebtoken": "^8.2.1",
     "pg-promise": "^10.7.3",
-    "sequelize": "^6.3.5",
-    "sqlite3": "^4.0.0"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "cross-env": "^5.1.4",
